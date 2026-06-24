@@ -1,0 +1,531 @@
+/* ============================================
+   POÇÕES & SOLUÇÕES — Estilos Globais
+   Paleta: fundo carvão, dourado envelhecido,
+   texto pergaminho. Fonte: Gill Sans.
+   ============================================ */
+
+:root {
+    --bg:          #0f0d0a;
+    --bg-raised:   #1a1510;
+    --bg-card:     #1e1a13;
+    --gold:        #c8a84b;
+    --gold-dim:    #7c5c1e;
+    --gold-glow:   rgba(200, 168, 75, 0.12);
+    --text:        #e8dcc8;
+    --text-dim:    #9a8c72;
+    --text-muted:  #5a5040;
+    --border:      #2e2618;
+    --border-mid:  #3d3220;
+
+    --font: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+}
+
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+html { scroll-behavior: smooth; }
+
+body {
+    font-family: var(--font);
+    background-color: var(--bg);
+    color: var(--text);
+    font-size: 17px;
+    line-height: 1.75;
+}
+
+/* ── Header ── */
+.site-header {
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    background: rgba(15, 13, 10, 0.96);
+    border-bottom: 1px solid var(--border-mid);
+    backdrop-filter: blur(6px);
+}
+
+.header-inner {
+    max-width: 1140px;
+    margin: 0 auto;
+    padding: 0.9rem 2rem;
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.header-sigil {
+    font-size: 1.8rem;
+    color: var(--gold);
+    line-height: 1;
+    flex-shrink: 0;
+}
+
+.header-title {
+    font-size: 1.25rem;
+    font-weight: 600;
+    color: var(--text);
+    letter-spacing: 0.02em;
+}
+
+.header-sub {
+    font-size: 0.72rem;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    color: var(--text-muted);
+}
+
+.header-nav {
+    margin-left: auto;
+    display: flex;
+    gap: 2rem;
+    align-items: center;
+}
+
+.header-nav a {
+    color: var(--text-dim);
+    text-decoration: none;
+    font-size: 0.88rem;
+    letter-spacing: 0.04em;
+    transition: color 0.2s;
+}
+
+.header-nav a:hover { color: var(--gold); }
+
+.nav-link-admin {
+    border: 1px solid var(--border-mid);
+    padding: 0.3rem 0.9rem;
+    font-size: 0.8rem !important;
+    color: var(--text-muted) !important;
+}
+
+.nav-link-admin:hover {
+    border-color: var(--gold-dim);
+    color: var(--gold) !important;
+}
+
+/* ── Hero ── */
+.hero {
+    min-height: 88vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 4rem 2rem;
+    background:
+        radial-gradient(ellipse 70% 50% at 50% 80%, rgba(124, 92, 30, 0.2) 0%, transparent 70%),
+        var(--bg);
+    border-bottom: 1px solid var(--border);
+}
+
+.hero-content { max-width: 660px; }
+
+.hero-eyebrow {
+    font-size: 0.75rem;
+    letter-spacing: 0.22em;
+    text-transform: uppercase;
+    color: var(--gold-dim);
+    margin-bottom: 1.8rem;
+}
+
+.hero-title {
+    font-size: clamp(2.6rem, 5.5vw, 4.2rem);
+    font-weight: 300;
+    color: var(--text);
+    line-height: 1.15;
+    margin-bottom: 1.2rem;
+    letter-spacing: -0.01em;
+}
+
+.hero-title em {
+    font-style: italic;
+    color: var(--gold);
+}
+
+.hero-desc {
+    color: var(--text-dim);
+    font-size: 1.05rem;
+    margin-bottom: 2.5rem;
+    max-width: 480px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* ── Button ── */
+.btn-primary {
+    display: inline-block;
+    font-family: var(--font);
+    font-size: 0.82rem;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    color: var(--gold);
+    background: transparent;
+    border: 1px solid var(--gold-dim);
+    padding: 0.7rem 2rem;
+    text-decoration: none;
+    cursor: pointer;
+    transition: background 0.22s, color 0.22s, border-color 0.22s;
+}
+
+.btn-primary:hover {
+    background: var(--gold);
+    color: var(--bg);
+    border-color: var(--gold);
+}
+
+/* ── Main / Sections ── */
+main {
+    max-width: 1140px;
+    margin: 0 auto;
+    padding: 0 2rem;
+}
+
+.section {
+    padding: 5rem 0;
+    border-bottom: 1px solid var(--border);
+}
+
+.section:last-child { border-bottom: none; }
+
+.section-header {
+    margin-bottom: 2.5rem;
+}
+
+.ornament {
+    display: block;
+    font-size: 0.75rem;
+    letter-spacing: 0.3em;
+    color: var(--gold-dim);
+    margin-bottom: 0.7rem;
+}
+
+.section-header h2 {
+    font-size: clamp(1.6rem, 3vw, 2.2rem);
+    font-weight: 400;
+    color: var(--text);
+    letter-spacing: -0.01em;
+}
+
+.section-desc {
+    color: var(--text-dim);
+    font-size: 0.95rem;
+    margin-top: -1.5rem;
+    margin-bottom: 2.5rem;
+    max-width: 560px;
+}
+
+/* ── Sobre ── */
+.sobre-grid {
+    display: grid;
+    grid-template-columns: 1fr 200px;
+    gap: 4rem;
+    align-items: center;
+}
+
+.sobre-text p {
+    color: var(--text-dim);
+    margin-bottom: 1rem;
+}
+
+.sobre-stats {
+    display: flex;
+    gap: 2.5rem;
+    margin-top: 2.2rem;
+    padding-top: 2rem;
+    border-top: 1px solid var(--border-mid);
+}
+
+.stat-num {
+    display: block;
+    font-size: 2rem;
+    font-weight: 300;
+    color: var(--gold);
+    line-height: 1;
+    letter-spacing: -0.02em;
+}
+
+.stat-label {
+    font-size: 0.72rem;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: var(--text-muted);
+}
+
+.sobre-flasks {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.big-flask {
+    font-size: 7rem;
+    color: var(--gold-dim);
+    animation: breathe 4s ease-in-out infinite;
+    display: block;
+    text-align: center;
+    filter: drop-shadow(0 0 24px rgba(200,168,75,0.25));
+}
+
+@keyframes breathe {
+    0%, 100% { transform: translateY(0) scale(1); opacity: 0.7; }
+    50%       { transform: translateY(-8px) scale(1.04); opacity: 1; }
+}
+
+/* ── História / Timeline ── */
+.section-historia { background: var(--bg-raised); }
+
+.timeline {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1.5rem;
+}
+
+.timeline-card {
+    display: flex;
+    gap: 1.2rem;
+    padding: 1.6rem;
+    border: 1px solid var(--border-mid);
+    border-left: 3px solid var(--gold-dim);
+    background: var(--bg-card);
+    transition: border-left-color 0.2s;
+}
+
+.timeline-card:hover { border-left-color: var(--gold); }
+
+.timeline-year {
+    font-size: 1.6rem;
+    font-weight: 300;
+    color: var(--gold-dim);
+    letter-spacing: -0.02em;
+    white-space: nowrap;
+    line-height: 1.1;
+    min-width: 56px;
+}
+
+/* .timeline-photo {
+    font-size: 2.2rem;
+    margin-bottom: 0.6rem;
+    line-height: 1;
+} */
+
+/* Container que envolve a foto ou o emoji na timeline */
+.timeline-photo {
+    font-size: 2.2rem;
+    margin-bottom: 1.2rem; /* Aumentado o espaço abaixo da foto */
+    line-height: 1;
+    display: flex;
+    justify-content: center; /* Centraliza a imagem no topo do conteúdo */
+    width: 100%;
+}
+
+/* Nova estilização para deixar as imagens maiores e bem posicionadas */
+.timeline-photo img {
+    width: 100%;          /* Faz a imagem ocupar a largura máxima disponível do card */
+    max-width: 320px;     /* Define um tamanho máximo generoso (ajuste se quiser ainda maior) */
+    height: 200px;        /* Fixa uma altura padrão para que todos os cards fiquem simétricos */
+    object-fit: cover;    /* Preenche o espaço cortando as bordas sem distorcer ou esticar a foto */
+    border-radius: 4px;   /* Mantém o leve arredondamento */
+    border: 1px solid var(--border-mid); /* Usa a borda intermediária do seu tema */
+    background: var(--bg-raised);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.4); /* Adiciona uma sombra para dar profundidade de pergaminho */
+    transition: transform 0.25s ease;
+}
+
+/* Efeito visual opcional ao passar o mouse por cima do card (igual ao do seu catálogo) */
+.timeline-card:hover .timeline-photo img {
+    transform: scale(1.02);
+    border-color: var(--gold-dim);
+}
+
+.section-historia .section-header {
+    text-align: center;
+}
+
+.timeline-body h3 {
+    font-size: 1rem;
+    font-weight: 600;
+    color: var(--text);
+    margin-bottom: 0.4rem;
+}
+
+.timeline-body p {
+    font-size: 0.88rem;
+    color: var(--text-dim);
+    line-height: 1.65;
+}
+
+/* ── Catálogo / Cards ── */
+.products-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(275px, 1fr));
+    gap: 1.5rem;
+}
+
+.potion-card {
+    background: var(--bg-card);
+    border: 1px solid var(--border-mid);
+    display: flex;
+    flex-direction: column;
+    transition: border-color 0.22s, transform 0.22s;
+}
+
+.potion-card:hover {
+    border-color: var(--gold-dim);
+    transform: translateY(-3px);
+}
+
+.potion-card img {
+    width: 100%;
+    height: 180px;
+    object-fit: contain;
+    background: var(--bg-raised);
+    padding: 1.2rem;
+    box-sizing: border-box;
+    border-bottom: 1px solid var(--border);
+    transition: transform 0.25s;
+}
+
+.potion-card:hover img { transform: scale(1.04); }
+
+.card-body {
+    padding: 1.3rem;
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    gap: 0.4rem;
+}
+
+.potion-card h3 {
+    font-size: 1.05rem;
+    font-weight: 600;
+    color: var(--text);
+}
+
+.potion-card p {
+    font-size: 0.88rem;
+    color: var(--text-dim);
+    line-height: 1.6;
+    flex: 1;
+}
+
+.card-footer {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 1.2rem;
+    padding-top: 1rem;
+    border-top: 1px solid var(--border);
+}
+
+.price {
+    font-size: 1.25rem;
+    font-weight: 300;
+    color: var(--gold);
+    letter-spacing: -0.01em;
+}
+
+.price small {
+    font-size: 0.7rem;
+    color: var(--text-muted);
+    margin-left: 0.2rem;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+}
+
+.btn-buy {
+    font-family: var(--font);
+    font-size: 0.76rem;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: var(--gold-dim);
+    background: transparent;
+    border: 1px solid var(--border-mid);
+    padding: 0.4rem 1rem;
+    cursor: pointer;
+    transition: background 0.2s, color 0.2s, border-color 0.2s;
+}
+
+.btn-buy:hover {
+    background: var(--gold-dim);
+    color: var(--bg);
+    border-color: var(--gold-dim);
+}
+
+/* ── Loading / states ── */
+.loading-msg {
+    grid-column: 1 / -1;
+    text-align: center;
+    color: var(--text-muted);
+    font-size: 0.95rem;
+    padding: 3rem;
+    letter-spacing: 0.05em;
+}
+
+/* ── Footer ── */
+.site-footer {
+    background: var(--bg-raised);
+    border-top: 1px solid var(--border-mid);
+    margin-top: 0;
+}
+
+.footer-inner {
+    max-width: 1140px;
+    margin: 0 auto;
+    padding: 3.5rem 2rem 2.5rem;
+    display: grid;
+    grid-template-columns: 1.5fr 1fr 1fr 1fr;
+    gap: 2rem;
+    align-items: start;
+}
+
+.footer-brand {
+    display: flex;
+    align-items: center;
+    gap: 0.6rem;
+}
+
+.footer-sigil {
+    font-size: 1.4rem;
+    color: var(--gold);
+}
+
+.footer-brand-name {
+    font-size: 1rem;
+    font-weight: 600;
+    color: var(--text);
+}
+
+.footer-col h4 {
+    font-size: 0.7rem;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    color: var(--gold-dim);
+    margin-bottom: 0.75rem;
+    font-weight: 600;
+}
+
+.footer-col p {
+    font-size: 0.85rem;
+    color: var(--text-muted);
+    line-height: 1.8;
+}
+
+.footer-bottom {
+    border-top: 1px solid var(--border);
+    text-align: center;
+    padding: 1.1rem 2rem;
+    font-size: 0.76rem;
+    color: var(--text-muted);
+    letter-spacing: 0.05em;
+}
+
+/* ── Responsive ── */
+@media (max-width: 800px) {
+    .sobre-grid        { grid-template-columns: 1fr; }
+    .sobre-flasks      { display: none; }
+    .timeline          { grid-template-columns: 1fr; }
+    .footer-inner      { grid-template-columns: 1fr 1fr; }
+    .header-nav a:not(.nav-link-admin):not(:last-child) { display: none; }
+}
+
+@media (max-width: 500px) {
+    .footer-inner { grid-template-columns: 1fr; }
+    .sobre-stats  { flex-direction: column; gap: 1.2rem; }
+}

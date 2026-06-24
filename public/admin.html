@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Administração — Poções e Soluções</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="admin.css">
+</head>
+<body class="admin-page">
+
+    <header class="site-header">
+        <div class="header-inner">
+            <span class="header-sigil">☥</span>
+            <div>
+                <h1 class="header-title">Poções &amp; Soluções</h1>
+                <p class="header-sub">Painel de Administração</p>
+            </div>
+        </div>
+    </header>
+
+    <main class="admin-main">
+        <div class="admin-container">
+
+            <section class="admin-section">
+                <div class="section-header">
+                    <h2>Cadastrar Nova Poção</h2>
+                </div>
+                <div class="admin-form-wrap">
+                    <form id="potion-form">
+                        <div class="form-group">
+                            <label for="name">Nome da Poção</label>
+                            <input type="text" id="name" placeholder="ex: Poção de Coragem Imortal" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="description">Descrição</label>
+                            <textarea id="description" rows="3" placeholder="Efeitos, ingredientes, advertências…" required></textarea>
+                        </div>
+                        <div class="form-group">
+                            <label for="image">URL da Imagem</label>
+                            <input type="url" id="image" placeholder="https://..." required>
+                        </div>
+                        <div class="form-group">
+                            <label for="price">Preço (Moedas)</label>
+                            <input type="number" id="price" min="1" placeholder="ex: 250" required>
+                        </div>
+                        <div class="form-actions">
+                            <button type="submit" class="btn-primary">Cadastrar Poção</button>
+                        </div>
+                        <p id="form-feedback" class="form-feedback" aria-live="polite"></p>
+                    </form>
+                </div>
+            </section>
+
+            <section class="admin-section">
+                <div class="section-header">
+                    <h2>Poções Cadastradas</h2>
+                </div>
+                <div id="admin-potions-container" class="admin-list">
+                    <p class="loading-msg">Carregando grimório…</p>
+                </div>
+            </section>
+
+        </div>
+    </main>
+
+    <footer class="site-footer">
+        <div class="footer-bottom">
+            <p>© 1867–2026 Poções &amp; Soluções · Painel Restrito</p>
+        </div>
+    </footer>
+
+    <script type="module" src="admin.js"></script>
+</body>
+</html>
