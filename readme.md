@@ -18,15 +18,21 @@ Este projeto consiste em uma aplicação web completa (Web Service + Frontend) d
 A árvore do projeto está organizada da seguinte forma:
 
 ```text
-potions-shop/
+Pocoes-Solucoes/
 │
+├── favicon.ico          # Ícone do site na aba do navegador
 ├── package.json         # Definição de dependências e scripts do ecossistema Node
 ├── server.js            # Servidor Express, rotas e inicialização do banco SQLite
-├── readme.md            # Arquivo readme do projeto
+├── README.md            # Arquivo README do projeto
 └── public/              # Pasta de arquivos estáticos acessíveis pelo navegador
-    ├── style.css        # Estilização visual unificada (Identidade Sóbria e Dark)
-    ├── index.html       # Interface pública da vitrine da loja (Visão do Comprador)
-    └── admin.html       # Interface de gerenciamento de estoque (Visão de Administrador)
+    ├── admin.css        # Estilização visual específica da página do administrador
+    ├── style.css        # Estilização visual genérica para as duas páginas
+    ├── index.html       # Interface pública da vitrine da loja
+    ├── admin.html       # Interface de gerenciamento de estoque
+    ├── admin.js         # Lógica da página administrativa
+    ├── index.js         # Lógica da página da loja
+    └── imgs/            # Pasta de imagens históricas
+
 ```
 
 
