@@ -1,3 +1,5 @@
+/*LÓGICA DA PÁGINA DE ADMINISTRAÇÃO*/
+
 const form = document.getElementById('potion-form');
 const feedback = document.getElementById('form-feedback');
 

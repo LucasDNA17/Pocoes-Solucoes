@@ -1,8 +1,4 @@
-/* ============================================
-   POÇÕES & SOLUÇÕES — Estilos Globais
-   Paleta: fundo carvão, dourado envelhecido,
-   texto pergaminho. Fonte: Gill Sans.
-   ============================================ */
+/* ESTILIZAÇÃO GENÉRICA DAS DUAS PÁGINAS */
 
 :root {
     --bg:          #0f0d0a;
@@ -32,7 +28,6 @@ body {
     line-height: 1.75;
 }
 
-/* ── Header ── */
 .site-header {
     position: sticky;
     top: 0;
@@ -148,7 +143,6 @@ body {
     margin-right: auto;
 }
 
-/* ── Button ── */
 .btn-primary {
     display: inline-block;
     font-family: var(--font);
@@ -170,7 +164,6 @@ body {
     border-color: var(--gold);
 }
 
-/* ── Main / Sections ── */
 main {
     max-width: 1140px;
     margin: 0 auto;
@@ -211,7 +204,6 @@ main {
     max-width: 560px;
 }
 
-/* ── Sobre ── */
 .sobre-grid {
     display: grid;
     grid-template-columns: 1fr 200px;
@@ -268,7 +260,6 @@ main {
     50%       { transform: translateY(-8px) scale(1.04); opacity: 1; }
 }
 
-/* ── História / Timeline ── */
 .section-historia { background: var(--bg-raised); }
 
 .timeline {
@@ -299,36 +290,27 @@ main {
     min-width: 56px;
 }
 
-/* .timeline-photo {
-    font-size: 2.2rem;
-    margin-bottom: 0.6rem;
-    line-height: 1;
-} */
-
-/* Container que envolve a foto ou o emoji na timeline */
 .timeline-photo {
     font-size: 2.2rem;
-    margin-bottom: 1.2rem; /* Aumentado o espaço abaixo da foto */
+    margin-bottom: 1.2rem; 
     line-height: 1;
     display: flex;
-    justify-content: center; /* Centraliza a imagem no topo do conteúdo */
+    justify-content: center; 
     width: 100%;
 }
 
-/* Nova estilização para deixar as imagens maiores e bem posicionadas */
 .timeline-photo img {
-    width: 100%;          /* Faz a imagem ocupar a largura máxima disponível do card */
-    max-width: 320px;     /* Define um tamanho máximo generoso (ajuste se quiser ainda maior) */
-    height: 200px;        /* Fixa uma altura padrão para que todos os cards fiquem simétricos */
-    object-fit: cover;    /* Preenche o espaço cortando as bordas sem distorcer ou esticar a foto */
-    border-radius: 4px;   /* Mantém o leve arredondamento */
-    border: 1px solid var(--border-mid); /* Usa a borda intermediária do seu tema */
+    width: 100%;          
+    max-width: 320px;     
+    height: 200px;        
+    object-fit: cover;    
+    border-radius: 4px;   
+    border: 1px solid var(--border-mid); 
     background: var(--bg-raised);
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.4); /* Adiciona uma sombra para dar profundidade de pergaminho */
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.4); 
     transition: transform 0.25s ease;
 }
 
-/* Efeito visual opcional ao passar o mouse por cima do card (igual ao do seu catálogo) */
 .timeline-card:hover .timeline-photo img {
     transform: scale(1.02);
     border-color: var(--gold-dim);
@@ -351,7 +333,6 @@ main {
     line-height: 1.65;
 }
 
-/* ── Catálogo / Cards ── */
 .products-grid {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(275px, 1fr));
@@ -448,7 +429,6 @@ main {
     border-color: var(--gold-dim);
 }
 
-/* ── Loading / states ── */
 .loading-msg {
     grid-column: 1 / -1;
     text-align: center;
@@ -458,7 +438,6 @@ main {
     letter-spacing: 0.05em;
 }
 
-/* ── Footer ── */
 .site-footer {
     background: var(--bg-raised);
     border-top: 1px solid var(--border-mid);
@@ -516,7 +495,6 @@ main {
     letter-spacing: 0.05em;
 }
 
-/* ── Responsive ── */
 @media (max-width: 800px) {
     .sobre-grid        { grid-template-columns: 1fr; }
     .sobre-flasks      { display: none; }

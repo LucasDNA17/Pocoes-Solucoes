@@ -1,3 +1,5 @@
+/*LÓGICA DA PÁGINA DA LOJA*/
+
 export function createPotionCard(potion) {
     const card = document.createElement('div');
     card.className = 'potion-card';

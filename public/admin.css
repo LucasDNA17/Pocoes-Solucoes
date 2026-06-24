@@ -1,6 +1,4 @@
-/* ============================================
-   ADMIN PAGE — Estilos específicos
-   ============================================ */
+/* ESTILIZAÇÃO ESPECÍFICA DA PÁGINA DO ADMINISTRADOR */
 
 .admin-page { background: var(--bg); }
 
@@ -15,7 +13,6 @@
 .admin-section { padding: 3rem 0; border-bottom: 1px solid var(--border); }
 .admin-section:last-child { border-bottom: none; }
 
-/* ── Formulário ── */
 .admin-form-wrap {
     background: var(--bg-card);
     border: 1px solid var(--border-mid);
