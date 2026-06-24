@@ -22,6 +22,7 @@ potions-shop/
 │
 ├── package.json         # Definição de dependências e scripts do ecossistema Node
 ├── server.js            # Servidor Express, rotas e inicialização do banco SQLite
+├── readme.md            # Arquivo readme do projeto
 └── public/              # Pasta de arquivos estáticos acessíveis pelo navegador
     ├── style.css        # Estilização visual unificada (Identidade Sóbria e Dark)
     ├── index.html       # Interface pública da vitrine da loja (Visão do Comprador)
@@ -33,15 +34,15 @@ potions-shop/
 
 Antes de iniciar, certifique-se de possuir:
 
-- Node.js instalado (recomenda-se a versão LTS);
-- Um terminal de comandos (Prompt de Comando, PowerShell ou Terminal do VS Code).
+- Node.js instalado;
+- Um terminal de comandos.
 
 Para verificar se o Node.js está instalado, execute:
 
 ```bash
 node -v
 ```
-Caso o comando não seja reconhecido, faça o download da versão mais recente LTS no site oficial do Node.js.
+Caso o comando não seja reconhecido, faça o download no site oficial do Node.js.
 
 
 ## ⚙️ Instalação
