@@ -109,13 +109,6 @@ Acesse:
 http://localhost:3000/
 ```
 
-Funcionalidades disponíveis:
-
-- Histórico da loja fundada em 1867;
-- Informações de contato;
-- Catálogo dinâmico de elixires;
-- Botão **Comprar** para cada produto.
-
 ### ⚙️ Painel Administrativo
 
 Acesse:
