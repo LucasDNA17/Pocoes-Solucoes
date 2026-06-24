@@ -1,6 +1,6 @@
 # Poções e Soluções - Sistema E-commerce Alquímico
 
-Este projeto consiste em uma aplicação web completa (Web Service + Frontend) desenvolvida para a loja **Poções e Soluções**, gerenciada por Innabelle Merigold no Beco da Última Saída. A aplicação foi estruturada utilizando arquitetura modular, separando completamente a interface voltada ao cliente do painel administrativo da loja, consumindo dados de forma assíncrona (AJAX) via Fetch API e sem o uso de React.
+Este projeto consiste em uma aplicação web completa (Web Service + Frontend) desenvolvida para a loja **Poções e Soluções**, gerenciada por Innabelle Merigold no Beco da Última Saída. A aplicação foi estruturada utilizando arquitetura modular, separando completamente a interface voltada ao cliente do painel administrativo da loja, consumindo dados de forma assíncrona (AJAX) via Fetch API.
 
 ---
 
@@ -8,8 +8,8 @@ Este projeto consiste em uma aplicação web completa (Web Service + Frontend) d
 
 - **Back-end / API:** Node.js com o framework Express.
 - **Banco de Dados & ORM:** Sequelize com banco de dados SQLite operando inteiramente em modo memória (`:memory:`).
-- **Front-end:** HTML5, CSS3 clássico/sóbrio (utilizando a tipografia *Gill Sans* e paleta escura) e JavaScript Vanilla (nativo).
-- **Comunicação assíncrona:** Fetch API (AJAX) para operações de CRUD (`GET`, `POST`, `DELETE`).
+- **Front-end:** HTML5, CSS3 e JavaScript Vanilla (nativo).
+- **Comunicação assíncrona:** Fetch API (AJAX) para operações de CRUD.
 
 ---
 
